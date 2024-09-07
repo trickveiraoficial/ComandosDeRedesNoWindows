@@ -1,0 +1,147 @@
+/* Reseta estilos básicos para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #282c34);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Gradiente animado */
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(40, 44, 52, 0.9); /* Sobreposição com transparência */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 i {
+    margin-right: 15px;
+    color: #00d8ff;
+}
+
+/* Estilo da seção de pesquisa */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+#campo-pesquisa {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid #61dafb;
+    background-color: #282c34;
+    color: #f0f0f0;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#campo-pesquisa:focus {
+    background-color: #333;
+    border-color: #21a1f1;
+}
+
+#btn-pesquisar {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #61dafb;
+    color: #1c1c1c;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#btn-pesquisar:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+/* Estilo dos resultados da pesquisa */
+.resultados-pesquisa {
+    margin-top: 20px;
+}
+
+.resultados-pesquisa h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+.resultados-pesquisa p {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+    border-left: 5px solid #61dafb;
+    font-family: monospace;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: rgba(40, 44, 52, 0.9); /* Sobreposição com transparência */
+    padding: 20px;
+    text-align: center;
+    color: #f0f0f0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #21a1f1;
+}
