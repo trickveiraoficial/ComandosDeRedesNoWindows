@@ -12,18 +12,30 @@
 
 <body>
     <header>
-        <h1><i class="fas fa-terminal"></i> Terminal - Comandos de Redes no Windows</h1>
+        <h1><i class="fas fa-terminal"></i> Terminal - Comandos no Windows</h1>
     </header>
     <main>
         <section>
-            <input type="text" placeholder="Digite seu comando ou descrição" id="campo-pesquisa">
+            <input type="text" placeholder="Digite seu comando ou descrição" id="campo-pesquisa" list="sugestoes">
+            <datalist id="sugestoes"></datalist>
             <button id="btn-pesquisar">Pesquisar</button>
         </section>
+        
+        <!-- Seção para Filtros por Categoria -->
+        <section id="filtros-categoria">
+            <label for="categoria">Definir categoria:</label>
+            <select id="categoria">
+                <option value="configuracoes-ip">Configurações de IP</option>
+                <option value="diagnostico-rede">Diagnóstico de Rede</option>
+                <!-- Adicionar mais opções de categorias conforme necessário -->
+            </select>
+        </section>
+
         <section class="resultados-pesquisa" id="resultados-pesquisa"></section>
     </main>
     <footer>
-        <p>2024 - Terminal: Comandos de Redes no Windows. Uso livre.</p>
-        <p>TRICKVEIRA</p>
+        <p>2024 - Terminal: Comandos no Windows. Uso livre.</p>
+        <p>Patrick Oliveira - TRICKVEIRA</p>
     </footer>
     <script type="module" src="dados.js"></script>
     <script type="module" src="app.js"></script>
